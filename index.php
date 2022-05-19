@@ -22,7 +22,7 @@
         </div>
         <div class="container-medio">
             <div class="container-musica">
-                <a class="logmusica" href="musica.html"><img class="logomusica" src="img/logomusica.png" /></a><br>
+                <a class="logmusica" href="html/musica.html"><img class="logomusica" src="img/logomusica.png" /></a><br>
                 <a class="musica">Música</a>
             </div>
             <div class="container-musica">

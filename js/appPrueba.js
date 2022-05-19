@@ -7,7 +7,7 @@ $(function(){
         let buscar=$('#busqueda').val();
         console.log(buscar);
         $.ajax({
-            url : 'lista_musica1.php',
+            url : '../php/lista_musica1.php',
             type : 'POST',
             data : { buscar: buscar},
             success : function(response){
@@ -39,7 +39,7 @@ $(function(){
 
     function actualizar() {
         $.ajax({
-            url: 'listamusica.php',
+            url: '../php/lista_musica.php',
             type: 'GET',
             success: function (response) {
                 let musicas = JSON.parse(response);
@@ -52,7 +52,7 @@ $(function(){
                                 <td class='id'>${musica.ID_M}</td>
                                 <td class='plays'>
                                     <button class="lista">
-                                        <img class="play" src="play.png">
+                                        <img class="play" src="../img/play.png">
                                     </button>
                                 </td>
                                 <td class='nombre'>${musica.NOMBRE_M}</td>
@@ -103,7 +103,7 @@ $(function(){
     function play(id) {
         $.ajax({
 
-            url: 'musicaid.php',
+            url: '../php/musicaid.php',
             type: 'POST',
             data: { id },
             success: function (response) {
