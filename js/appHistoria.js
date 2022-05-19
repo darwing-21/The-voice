@@ -1,11 +1,49 @@
 $(function () {
+    console.log('jQuery esta funcionando');
     let idactual;
     let totalhistorias = 0
-    console.log('jQuery esta funcionando');
     actualizar();
+
+    $('#busqueda').keyup(function(){
+        let buscar=$('#busqueda').val();
+        console.log(buscar);
+        $.ajax({
+            url : '../php/lista_historia1.php',
+            type : 'POST',
+            data : { buscar: buscar},
+            success : function(response){
+                console.log(response);
+                let template = '';
+                let historias = JSON.parse(response);
+                totalhistorias = historias.length;
+                historias.forEach(historia => {
+                    template += 
+                    `
+                        <br><table class="container-musica" idMusica="${historia.ID_H}">
+                            <tr>
+                                <td class='id'>${historia.ID_H}</td>
+                                <td class='plays'>
+                                    <button class="lista">
+                                        <img class="play" src="../img/play.png">
+                                    </button>
+                                </td>
+                                <td class='nombre'>${historia.TITULO_H}</td>
+                                <td class='autor'>${historia.ID_U}</td>
+                                <td class='genero'>${historia.DESCRIPCION_H}</td>
+                            </tr>
+                        </table><br>
+                `
+                });
+                $('#lista-musica').html(template);
+            }
+        })
+    })
+
+
+
     function actualizar() {
         $.ajax({
-            url: 'listahistoria.php',
+            url: '../php/lista_historia.php',
             type: 'GET',
             success: function (response) {
                 let historias = JSON.parse(response);
@@ -18,7 +56,7 @@ $(function () {
                                 <td class='id'>${historia.ID_H}</td>
                                 <td class='plays'>
                                     <button class="lista">
-                                        <img class="play" src="play.png">
+                                        <img class="play" src="../img/play.png">
                                     </button>
                                 </td>
                                 <td class='nombre'>${historia.TITULO_H}</td>
@@ -69,7 +107,7 @@ $(function () {
     function play(id) {
         $.ajax({
 
-            url: 'historiaid.php',
+            url: '../php/historiaid.php',
             type: 'POST',
             data: { id },
             success: function (response) {
