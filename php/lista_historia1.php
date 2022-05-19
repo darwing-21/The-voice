@@ -7,7 +7,8 @@
 
     if(empty($buscar)){
 
-        $query = "select ID_H,TITULO_H,ID_U,DESCRIPCION_H from HISTORIA";       
+        $query = "select H.ID_H,H.TITULO_H,U.NOMBRE_U,H.DESCRIPCION_H from HISTORIA AS H, USUARIOS AS U 
+        WHERE  H.ID_U=U.ID_U";       
         $result=mysqli_query($connection, $query);
         if(!$result){
             die('Quey Error'.mysqli_error($connection));
@@ -17,15 +18,17 @@
             $json[]=array(
                 'ID_H' => $row['ID_H'],
                 'TITULO_H' => $row['TITULO_H'],
-                'ID_U' => $row['ID_U'],
+                'NOMBRE_U' => $row['NOMBRE_U'],
                 'DESCRIPCION_H' => $row['DESCRIPCION_H']
             );
         }
         $jsonstring=json_encode($json);
         echo $jsonstring;
     }else{
-        $query = "select ID_H,TITULO_H,ID_U,DESCRIPCION_H from HISTORIA where TITULO_H like '%".$buscar."%' 
-        OR DESCRIPCION_H like '%".$buscar."%' ";
+        $query = "select H.ID_H,H.TITULO_H,U.NOMBRE_U,H.DESCRIPCION_H
+                         from HISTORIA AS H, USUARIOS AS U 
+                         where  H.ID_U=U.ID_U AND  (H.TITULO_H like '%".$buscar."%' OR U.NOMBRE_U like '%".$buscar."%'
+                        OR H.DESCRIPCION_H like '%".$buscar."%' )";
         $result=mysqli_query($connection, $query);
         if(!$result){
             die('Quey Error'.mysqli_error($connection));       
@@ -34,7 +37,7 @@
             $json[]=array(
                 'ID_H' => $row['ID_H'],
                 'TITULO_H' => $row['TITULO_H'],
-                'ID_U' => $row['ID_U'],
+                'NOMBRE_U' => $row['NOMBRE_U'],
                 'DESCRIPCION_H' => $row['DESCRIPCION_H']
             );
         }

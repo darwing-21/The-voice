@@ -50,7 +50,7 @@
                 <a class="musica">Audilibro</a>
             </div>
             <div class="container-musica">
-                <a class="logmusica" href="html/historiaU.html"><img class="logomusica" src="img/microfono.png" /></a><br>
+                <a class="logmusica" href="html/historiaU.php"><img class="logomusica" src="img/microfono.png" /></a><br>
                 <a class="musica">Historia</a>
             </div>
         </div>

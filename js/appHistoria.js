@@ -28,7 +28,7 @@ $(function () {
                                     </button>
                                 </td>
                                 <td class='nombre'>${historia.TITULO_H}</td>
-                                <td class='autor'>${historia.ID_U}</td>
+                                <td class='autor'>${historia.NOMBRE_U}</td>
                                 <td class='genero'>${historia.DESCRIPCION_H}</td>
                             </tr>
                         </table><br>
@@ -60,7 +60,7 @@ $(function () {
                                     </button>
                                 </td>
                                 <td class='nombre'>${historia.TITULO_H}</td>
-                                <td class='autor'>${historia.ID_U}</td>
+                                <td class='autor'>${historia.NOMBRE_U}</td>
                                 <td class='genero'>${historia.DESCRIPCION_H}</td>
                             </tr>
                         </table><br>
