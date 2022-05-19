@@ -26,11 +26,11 @@
                 <a class="musica">Música</a>
             </div>
             <div class="container-musica">
-                <a class="logmusica" href="audiolibro.html"><img class="logomusica" src="img/logo-audio.png" /></a><br>
+                <a class="logmusica" href="html/audiolibro.html"><img class="logomusica" src="img/logo-audio.png" /></a><br>
                 <a class="musica">Audilibro</a>
             </div>
             <div class="container-musica">
-                <a class="logmusica" href="historia.html"><img class="logomusica" src="img/microfono.png" /></a><br>
+                <a class="logmusica" href="html/historia.html"><img class="logomusica" src="img/microfono.png" /></a><br>
                 <a class="musica">Historia</a>
             </div>
         </div>

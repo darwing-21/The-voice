@@ -5,7 +5,7 @@ $(function () {
     actualizar();
     function actualizar() {
         $.ajax({
-            url: 'listaaudiolibro.php',
+            url: '../php/lista_audio.php',
             type: 'GET',
             success: function (response) {
                 let audiolibros = JSON.parse(response);
@@ -18,11 +18,12 @@ $(function () {
                                 <td class='id'>${audiolibro.ID_AL}</td>
                                 <td class='plays'>
                                     <button class="lista">
-                                        <img class="play" src="play.png">
+                                        <img class="play" src="../img/play.png">
                                     </button>
                                 </td>
                                 <td class='nombre'>${audiolibro.NOMBRE_AL}</td>
                                 <td class='autor'>${audiolibro.AUTOR_AL}</td>
+                                <td class='genero'>${audiolibro.NARRADOR_AL}</td>
                                 <td class='genero'>${audiolibro.CATEGORIA_AL}</td>
                             </tr>
                         </table><br>
@@ -69,7 +70,7 @@ $(function () {
     function play(id) {
         $.ajax({
 
-            url: 'audiolibroid.php',
+            url: '../php/audiolibroid.php',
             type: 'POST',
             data: { id },
             success: function (response) {
