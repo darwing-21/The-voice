@@ -5,7 +5,7 @@
     //variable de sesion
     $usuario = $_SESSION['NOMBRE_U'];
     if(!isset($usuario)){
-        header("location: index.php");
+        header("location: '../ index.php'");
     }
     $query = "SELECT * FROM USUARIOS WHERE NOMBRE_U = '$usuario'";
     $ejecuta= $connection->query($query);
@@ -42,7 +42,7 @@
         </div>        
         <div class="container-medio">
             <div class="container-musica">
-                <a class="logmusica" href="musica.html"><img class="logomusica" src="img/logomusica.png" /></a><br>
+                <a class="logmusica" href="html/musicaU.php"><img class="logomusica" src="img/logomusica.png" /></a><br>
                 <a class="musica">Música</a>
             </div>
             <div class="container-musica">
