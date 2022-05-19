@@ -13,6 +13,7 @@ ul {
 
 body {
     background-color: #f19236;
+    min-width: 930px;
 }
 
 a {

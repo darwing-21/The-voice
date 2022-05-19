@@ -36,10 +36,10 @@
         </div>
         <div class="container-inferior">
             <ul>
-                <li><a class="acercade" href="acercade.html">Acerca de</a></li>
-                <li><a class="politica" href="politicaDePrivacidad.html">Política de privacidad</a></li>
-                <li><a class="ayuda" href="ayuda.html">Ayuda</a></li>
-                <li><a class="legal" href="legal.html">Legal</a></li>
+                <li><a class="acercade" href="html/acercade.html">Acerca de</a></li>
+                <li><a class="politica" href="html/politicaDePrivacidad.html">Política de privacidad</a></li>
+                <li><a class="ayuda" href="html/ayuda.html">Ayuda</a></li>
+                <li><a class="legal" href="html/legal.html">Legal</a></li>
             </ul>
         </div>
     </div>
