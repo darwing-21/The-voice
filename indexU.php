@@ -20,20 +20,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>La voz de los mayores</title>
-    <link rel="stylesheet" href="css/estilo_index.css" />
+    <link rel="stylesheet" href="css/estilos_indexU.css" />
     <link rel="shortcut icon" href="img/logo1.png">
 </head>
 
 <body>
     <div class="general">
-        <div class="container-superior">
-            <img class="logo" src="img/logo1.png">
-            <h1 class="title">La Voz de los mayores</h1>
-            <div class="registro-inicio">
-                    <h6><?php echo $usuario;?></h6>
-                    <a href="include/cerrars.php" class="inicio">Cerrar sesion</a>
+        <div class="header">
+            <div class="container-superior">
+                <img class="logo" src="img/logo1.png">
+                <h1 class="title">La Voz de los mayores</h1>
             </div>
-        </div>
+            <div class="usuario">
+                    <img src="img/usuario-de-perfil.png">
+                    <h4 ><?php echo $usuario;?></h4>
+            </div>
+            <div class="cerrar_sesion">
+                <a href="include/cerrars.php" class="cerrar"><img src="img/cerrar-sesion.png"></a>
+                <h4>Cerrar sesión</h4>
+            </div>
+        </div>        
         <div class="container-medio">
             <div class="container-musica">
                 <a class="logmusica" href="musica.html"><img class="logomusica" src="img/logomusica.png" /></a><br>
