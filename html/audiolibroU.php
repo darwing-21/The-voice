@@ -1,3 +1,17 @@
+<?php 
+    //variable de sesion
+    session_start();
+    include '../include/conexion.php';
+    //variable de sesion
+    $usuario = $_SESSION['NOMBRE_U'];
+    if(!isset($usuario)){
+        header("location: ../index.php");
+    }
+    $query = "SELECT * FROM USUARIOS WHERE NOMBRE_U = '$usuario'";
+    $ejecuta= $connection->query($query);
+    $row = $ejecuta ->fetch_assoc();
+
+?>
 <!DOCTYPE html>
 <html lang="es">
 
@@ -13,11 +27,11 @@
 <body>
     <div class="general">
         <div class="container-superior">
-            <a href="../index.php"><img class="logo" src="../img/logo1.png"></a>
+            <a href="../indexU.php"><img class="logo" src="../img/logo1.png"></a>
             <h1 class="title">La Voz de los mayores -  Seccion Audiolibros</h1>
             <div class="registro-inicio">
-                <a href="../login.php" class="inicio">Iniciar sesion</a>
-                <a href="../register.php" class="registro">Registrarse</a>
+                <a href="../php/register_audiolibro.php" class="inicio">Registrar audiolibro</a>
+                <a href="../include/cerrars.php" class="registro">Cerrar Sesión</a>
             </div>
         </div>
 

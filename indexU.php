@@ -46,11 +46,11 @@
                 <a class="musica">Música</a>
             </div>
             <div class="container-musica">
-                <a class="logmusica" href="audiolibro.html"><img class="logomusica" src="img/logo-audio.png" /></a><br>
+                <a class="logmusica" href="html/audiolibroU.php"><img class="logomusica" src="img/logo-audio.png" /></a><br>
                 <a class="musica">Audilibro</a>
             </div>
             <div class="container-musica">
-                <a class="logmusica" href="historia.html"><img class="logomusica" src="img/microfono.png" /></a><br>
+                <a class="logmusica" href="html/historiaU.html"><img class="logomusica" src="img/microfono.png" /></a><br>
                 <a class="musica">Historia</a>
             </div>
         </div>
