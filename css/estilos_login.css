@@ -141,6 +141,10 @@ label{
    .registers:hover{
        color: white;
    }
+   .message{
+       display: flex;
+       margin-left: 25%;
+   }
    .botones{
     text-align: center;
     padding: 30px;

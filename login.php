@@ -1,3 +1,28 @@
+<?php
+    session_start();
+    error_reporting(0);
+    include('include/conexion.php'); 
+    if(isset($_POST['entrar'])){
+        $usuario= $_POST['usuario'];
+        $contrasena = $_POST['contrasena'];
+
+         $usuario1 = str_replace("'", "’", $usuario);
+        $contrasena1 = str_replace("'", "’", $contrasena);
+
+         $query = "SELECT * FROM USUARIOS WHERE NOMBRE_U='$usuario1' and CONTRASENIA_U='$contrasena1' ";
+         $validar_inicio = mysqli_query($connection , $query);
+        $row_cont = $validar_inicio->num_rows;
+
+         if($row_cont >0){
+             $_SESSION['login']=TRUE;
+             $_SESSION['NOMBRE_U']=$usuario1;
+            header("location:indexU.php") ;
+         }else{
+            $mensaje.="<div class='message'><img src='img/error.png'>
+                                <h4>Verifique sus datos. Gracias!</h4></div>";      
+         }
+    }
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -20,7 +45,7 @@
         </div>                               
         <div class="container_medio">                       
                 <div class="form">
-                    <form action="register_usuario.php" method="post">
+                    <form action="<?php echo $_SERVER['PHP_SELF'];?>" method="post">
                         <div class="titulo">
                             <h2 class="iniciar_sesion">Iniciar Sesión</h2>
                         </div><br>
@@ -45,7 +70,7 @@
                         <div class="botones">
                             <button class="entrar" type="submit" id="entrar" name="entrar">Entrar</button>
                         </div>
-
+                        <?php echo $mensaje?>
                     </form>
                 </div>
         </div>
