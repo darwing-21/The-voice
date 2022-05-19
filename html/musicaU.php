@@ -30,7 +30,7 @@
             <a href="../indexU.php"><img class="logo" src="../img/logo1.png"></a>
             <h1 class="title">La Voz de los mayores - Seccion Musicas</h1>
             <div class="registro-inicio">
-                <a href="../login.php" class="inicio">Registrar musica</a>
+                <a href="../php/register_musica.php" class="inicio">Registrar musica</a>
                 <a href="../include/cerrars.php" class="registro">Cerrar Sesión</a>
             </div>
         </div>
