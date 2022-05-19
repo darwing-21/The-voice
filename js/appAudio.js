@@ -3,6 +3,42 @@ $(function () {
     let totalaudiolibros = 0
     console.log('jQuery esta funcionando');
     actualizar();
+
+    $('#busqueda').keyup(function(){
+        let buscar=$('#busqueda').val();
+        console.log(buscar);
+        $.ajax({
+            url : '../php/lista_audio1.php',
+            type : 'POST',
+            data : { buscar: buscar},
+            success : function(response){
+                console.log(response);
+                let template = '';
+                let audiolibros = JSON.parse(response);
+                totalaudiolibros = audiolibros.length;
+                audiolibros.forEach(audiolibro => {
+                    template +=`<br>
+                                    <table class="container-musica" idMusica="${audiolibro.ID_AL}">
+                                        <tr>
+                                            <td class='id'>${audiolibro.ID_AL}</td>
+                                            <td class='plays'>
+                                                <button class="lista">
+                                                    <img class="play" src="../img/play.png">
+                                                </button>
+                                            </td>
+                                            <td class='nombre'>${audiolibro.NOMBRE_AL}</td>
+                                            <td class='autor'>${audiolibro.AUTOR_AL}</td>
+                                            <td class='genero'>${audiolibro.NARRADOR_AL}</td>
+                                            <td class='genero'>${audiolibro.CATEGORIA_AL}</td>
+                                        </tr>
+                                    </table><br>
+                    `
+                });
+                $('#lista-musica').html(template);
+            }
+        })
+    })
+
     function actualizar() {
         $.ajax({
             url: '../php/lista_audio.php',
