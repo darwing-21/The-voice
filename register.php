@@ -21,7 +21,7 @@
         <div class="container_medio">           
             
                 <div class="form">
-                    <form action="registro_usuario.php" method="post">
+                    <form action="register_usuario.php" method="post">
                         <div class="titulo">
                             <h2 class="registrarse">Registrarse</h2>
                         </div><br>

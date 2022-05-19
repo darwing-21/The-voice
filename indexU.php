@@ -1,3 +1,17 @@
+<?php 
+    //variable de sesion
+    session_start();
+    include 'include/conexion.php';
+    //variable de sesion
+    $usuario = $_SESSION['NOMBRE_U'];
+    if(!isset($usuario)){
+        header("location: index.php");
+    }
+    $query = "SELECT * FROM USUARIOS WHERE NOMBRE_U = '$usuario'";
+    $ejecuta= $connection->query($query);
+    $row = $ejecuta ->fetch_assoc();
+
+?>
 <!DOCTYPE html>
 <html lang="es">
 
@@ -16,8 +30,8 @@
             <img class="logo" src="img/logo1.png">
             <h1 class="title">La Voz de los mayores</h1>
             <div class="registro-inicio">
-                <a href="IniciarSesion.php" class="inicio">Iniciar sesion</a>
-                <a href="register.php" class="registro">Registrarse</a>
+                    <h6><?php echo $usuario;?></h6>
+                    <a href="include/cerrars.php" class="inicio">Cerrar sesion</a>
             </div>
         </div>
         <div class="container-medio">
