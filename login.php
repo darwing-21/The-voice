@@ -63,7 +63,7 @@
                             minlength="8" required onkeyup="this.value=this.value.replace(/^\s+/,'');">   
                         </div>
                         <div class="register">
-                            <h3 class="salto">¿Aun no tines cuenta?</h3>
+                            <h3 class="salto">¿Aún no tienes una cuenta?</h3>
                             <a href="register.php" class="registers">Regístrate</a>
                         </div>
                         <!--BOTONES CONFIRMAR Y ACEPTAR-->                 
