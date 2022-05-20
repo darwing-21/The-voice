@@ -22,7 +22,7 @@ $(function(){
                                             <td class='id'>${musica.ID_M}</td>
                                             <td class='plays'>
                                                 <button class="lista">
-                                                    <img class="play" src="play.png">
+                                                    <img class="play" src="../img/play.png">
                                                 </button>
                                             </td>
                                             <td class='nombre'>${musica.NOMBRE_M}</td>

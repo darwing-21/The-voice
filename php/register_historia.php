@@ -62,7 +62,7 @@
                     </div>
                     <div class="botones">
                         <button type="submit" class="registrar" name="registrar" id="registrar" disabled >Registrar</button>
-                        <button class="cancelar" type="reset">Cancelar</button></a>
+                        <button class="cancelar" type="reset" onclick = "desactivar()">Cancelar</button></a>
                     </div>
                 </form>
             </div>

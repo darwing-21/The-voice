@@ -85,7 +85,7 @@
           <div class="botones">
             <a href=""><button id="btn" class="registrar" type="submit" name="registrar" disabled >Registrar</button></a>
             
-            <button class="cancelar" type="reset">Cancelar</button>
+            <button class="cancelar" type="reset" onclick = "desactivar()">Cancelar</button>
           </div>
         </form>
 

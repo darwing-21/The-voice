@@ -42,12 +42,12 @@
         </div>        
         <div class="container-medio">
             <div class="container-musica">
-                <a class="logmusica" href="html/musicaU.php"><img class="logomusica" src="img/logomusica.png" /></a><br>
+                <a class="logmusica" href="html/musicaU.php"><img class="logomusica" src="img/musica.png" /></a><br>
                 <a class="musica">Música</a>
             </div>
             <div class="container-musica">
                 <a class="logmusica" href="html/audiolibroU.php"><img class="logomusica" src="img/logo-audio.png" /></a><br>
-                <a class="musica">Audilibro</a>
+                <a class="musica">Audiolibro</a>
             </div>
             <div class="container-musica">
                 <a class="logmusica" href="html/historiaU.php"><img class="logomusica" src="img/microfono.png" /></a><br>
